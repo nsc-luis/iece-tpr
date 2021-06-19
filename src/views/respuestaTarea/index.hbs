@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <h3><strong>Tarea: </strong>{{tarea.nombre}}</h3>
+    <textarea class="summernotedisabled">{{tarea.descripcion}}</textarea>
+    <strong>Autor: </strong>{{tarea.solicitante}} <br> <strong>Asignado: </strong>{{tarea.asignado}} <br> <strong>Fecha: </strong>{{timeago tarea.fechayhora}} <br>
+
+    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#modalRespuesta">
+        Responder
+    </button>
+    <hr>
+    {{#each respuestas}}
+        <div class="row mt-2 p-3" style="border: 1px solid black; border-radius: 38px;">
+            <div class="col-md-2">
+                <img src="/images/{{foto}}" class="imgPerfil">
+            </div>
+            <div class="col-md-10">
+                <strong>{{nombre}}</strong> responde: <br>
+                <textarea class="summernotedisabled">{{respuesta}}</textarea><br>
+                <strong>Fecha: </strong>{{timeago fechayhora}}
+                <a href="/respuesta/delete/{{idRespuesta}}" class="btn btn-danger btn-sm vcenter">Eliminar</a>
+            </div>
+        </div>
+    {{/each}}
+
+    {{! Modal formulario de pregunta }}
+    <div class="modal fade" id="modalRespuesta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Respuesta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="/respuestaTarea/add/{{tarea.id}}" method="post">
+                            <div class="form-group">
+                                <textarea type="text" name="respuesta" required="required" class="form-control summernote" rows="7" style="width: 100%"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

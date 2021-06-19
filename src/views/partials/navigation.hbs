@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    
+      {{#if user}}
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/proyecto">Proyecto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pregunta">Preguntas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tarea">Tareas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reunion">Reuniones</a>
+          </li>
+        </ul>
+
+        {{!-- <div class="dropdown">
+          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuCatalogos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Catalogos
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuCatalogos">
+            <a class="dropdown-item" href="/distrito">Distrito</a>
+            <a class="dropdown-item" href="#">Sector</a>
+            <a class="dropdown-item" href="#">Ministro</a>
+            <a class="dropdown-item" href="#">Miembro</a>
+          </div>
+        </div> --}}
+
+        <div class="dropdown ml-auto mr-5">
+          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuPerfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Perfil
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuPerfil">
+            <a class="dropdown-item" href="/usuario">Usuario</a>
+            <a class="dropdown-item" href="/signup">Registrar</a>
+            <a class="dropdown-item" href="/cerrarSesion">Cerrar sesion</a>
+          </div>
+        </div>
+      {{/if}} 
+    
+  </div>
+</nav>

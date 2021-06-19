@@ -1,0 +1,6 @@
+C:\\Users\\Propietario\\Desktop\\iece-tpr\\src\\index.js
+npm install -g qckwinsvc
+
+tarea
+respuesta
+respuestaTarea

@@ -1,0 +1,14 @@
+.pregunta-tarea {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.pregunta-tarea:hover {
+    box-shadow: inset -1px -1px 2px black;
+}
+.imgPerfil {
+    width: 8em;
+    border-radius: 30px;
+}
+.listPreguntaTarea {
+    font-size: 23px;
+}

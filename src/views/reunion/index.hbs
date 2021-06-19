@@ -1,0 +1,53 @@
+<div class="container">
+
+    <h3 class="mt-2">Bitacora de reuniones</h3>
+    <a href="/reunion/form" class="btn btn-dark btn-sm">Agregar registro</a>
+
+    {{#each reuniones}}
+        <div class="pregunta-tarea mt-2 p-2">
+            
+            <div class="row text-center bg-info font-weight-bold ml-1 mr-1">
+                <div class="col-md-2">
+                    Fecha
+                </div>
+                <div class="col-md-5">
+                    Puntos a tratar
+                </div>
+                <div class="col-md-5">
+                    Acuerdos
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="text" class="text-center" readonly value="{{dateFormat fecha}}">
+                </div>
+                <div class="col-md-5">
+                    <textarea name="puntosATratar" class="summernotedisabled">{{puntosATratar}}</textarea>
+                </div>
+                <div class="col-md-5">
+                    <textarea name="acuerdos" class="summernotedisabled">{{acuerdos}}</textarea>
+                </div>
+            </div>
+
+            <div class="row text-center bg-info font-weight-bold ml-1 mr-1">
+                <div class="col-md-2">
+                    Prox. reunion
+                </div>
+                <div class="col-md-10">
+                    Tareas Nacientes
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                   <input type="text" class="text-center" readonly value="{{dateFormat proximaReunion}}">
+                </div>
+                <div class="col-md-10">
+                    <textarea name="tareasNacientes" class="summernotedisabled">{{tareasNacientes}}</textarea>
+                </div>
+            </div>
+            <a href="/reunion/form/{{id}}" class="btn btn-dark btn-sm">Editar</a>
+            <a href="/reunion/delete/{{id}}" class="btn btn-danger btn-sm">Borrar</a>
+            
+        </div>
+    {{/each}}
+</div>

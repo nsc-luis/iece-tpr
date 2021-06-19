@@ -1,0 +1,19 @@
+<div class="container">
+    <form action="/pregunta/{{pregunta.action}}" method="post">
+        <div class="row mt-4">
+            <div class="form-group col-md-12">
+                <label for="pregunta"><strong>Pregunta*</strong></label>
+                <input type="text" name="pregunta" required="required" value="{{pregunta.pregunta}}" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="descripcion"><strong>Descripcion</strong></label>
+                <textarea type="text" name="descripcion" class="form-control summernote" rows="7" style="width: 100%">{{pregunta.descripcion}}</textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-sm w-100 text-center">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

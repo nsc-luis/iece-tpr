@@ -1,0 +1,27 @@
+<div class="container">
+    <form action="/tarea/{{tarea.action}}" method="post">
+        <div class="row mt-4">
+            <div class="form-group col-md-12">
+                <label for="pregunta"><strong>Tarea*</strong></label>
+                <input type="text" name="nombre" value="{{tarea.nombre}}" required="required" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="descripcion"><strong>Descripcion</strong></label>
+                <textarea type="text" name="descripcion" class="form-control summernote" rows="7" style="width: 100%">{{tarea.descripcion}}</textarea>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="recibe"><strong>Usuario asignado:</strong></label>
+                <select name="idUsuarioAsignado">
+                    {{#each usuarios}}
+                        <option value="{{id}}" {{#if tarea.idUsuarioAsignado}} selected {{/if}}>{{nombre}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-sm">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    
+    <h3 class="mt-2">Listado de preguntas</h3>
+    <a href="/pregunta/form" class="btn btn-dark btn-sm">Agregar pregunta</a>
+    
+    {{#each preguntas}}
+        <div class="row mt-2 pregunta-tarea">
+            <div class="col-md-10">
+                <a class="listPreguntaTarea" href="/respuesta/{{idPregunta}}">{{pregunta}}</a><br>
+                <strong>Autor:</strong> {{nombre}} , <strong>Fecha:</strong> {{timeago fechayhora}}
+            </div>
+            <div class="col-md-1">
+                <a href="/pregunta/edit/{{idPregunta}}" class="btn btn-info btn-sm">Editar</a>
+            </div>
+            <div class="col-md-1">
+                <a href="/pregunta/delete/{{idPregunta}}" class="btn btn-danger btn-sm">Eliminar</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

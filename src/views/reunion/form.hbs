@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <form action="/reunion/{{reunion.action}}" method="post">
+        <div class="pregunta-tarea mt-2 p-2">
+            
+            <div class="row text-center bg-info font-weight-bold ml-1 mr-1">
+                <div class="col-md-2">
+                    Fecha
+                </div>
+                <div class="col-md-5">
+                    Puntos a tratar
+                </div>
+                <div class="col-md-5">
+                    Acuerdos
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="text" value="{{reunion.fecha}}" required="required" name="fecha" id="fechaReunion">
+                </div>
+                <div class="col-md-5">
+                    <textarea name="puntosATratar" required="required" class="summernote">{{reunion.puntosATratar}}</textarea>
+                </div>
+                <div class="col-md-5">
+                    <textarea name="acuerdos" class="summernote">{{reunion.acuerdos}}</textarea>
+                </div>
+            </div>
+
+            <div class="row text-center bg-info font-weight-bold ml-1 mr-1">
+                <div class="col-md-2">
+                    Prox. reunion
+                </div>
+                <div class="col-md-10">
+                    Tareas Nacientes
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="text" value="{{reunion.proximaReunion}}" name="proximaReunion" id="fechaProxReunion">
+                </div>
+                <div class="col-md-10">
+                    <textarea name="tareasNacientes" class="summernote">{{reunion.tareasNacientes}}</textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark btn-sm w-100 text-center">Guardar</button>            
+        </div>
+    </form>
+</div>

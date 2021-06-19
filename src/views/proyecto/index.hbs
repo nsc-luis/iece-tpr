@@ -1,0 +1,8 @@
+<div class="container mt-4">
+    <h3><strong>Proyecto: </strong>{{proyecto.nombre}}</h3>
+    <textarea class="summernotedisabled">{{proyecto.descripcion}}</textarea>
+    <strong>Fecha: </strong>{{timeago proyecto.created_at}} <br>
+
+    <a href="/proyecto/edit/{{proyecto.id}}" class="btn btn-dark btn-sm w-100 text-center">Editar Proyecto</a>
+    <hr>
+</div>

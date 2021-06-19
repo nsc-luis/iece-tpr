@@ -1,0 +1,23 @@
+server on port  4000 http://localhost:4000
+DB is connected
+[0mGET / [36m304[0m 112.611 ms - -[0m
+[0mGET /summernote-0.8.18-dist/summernote-bs4.min.css [36m304[0m 16.541 ms - -[0m
+[0mGET /summernote-0.8.18-dist/summernote-bs4.min.js [36m304[0m 12.233 ms - -[0m
+[0mGET /js/fnGenerales.js [36m304[0m 13.929 ms - -[0m
+[0mGET /css/style.css [36m304[0m 15.702 ms - -[0m
+[0mGET /images/logo_signin.png [36m304[0m 6.112 ms - -[0m
+server on port  4000 http://localhost:4000
+DB is connected
+[0mGET / [32m200[0m 126.295 ms - 3262[0m
+[0mGET /summernote-0.8.18-dist/summernote-bs4.min.css [32m200[0m 13.289 ms - 19403[0m
+[0mGET /js/fnGenerales.js [32m200[0m 8.813 ms - 1322[0m
+[0mGET /summernote-0.8.18-dist/summernote-bs4.min.js [32m200[0m 12.363 ms - 151398[0m
+[0mGET /css/style.css [32m200[0m 5.976 ms - 254[0m
+[0mGET /images/logo_signin.png [32m200[0m 1.767 ms - 1854[0m
+[0mGET /favicon.ico [33m404[0m 4.342 ms - 150[0m
+[0mGET / [36m304[0m 12.925 ms - -[0m
+[0mGET /summernote-0.8.18-dist/summernote-bs4.min.css [36m304[0m 18.441 ms - -[0m
+[0mGET /summernote-0.8.18-dist/summernote-bs4.min.js [36m304[0m 34.108 ms - -[0m
+[0mGET /js/fnGenerales.js [36m304[0m 41.131 ms - -[0m
+[0mGET /css/style.css [36m304[0m 48.304 ms - -[0m
+[0mGET /images/logo_signin.png [36m304[0m 7.435 ms - -[0m

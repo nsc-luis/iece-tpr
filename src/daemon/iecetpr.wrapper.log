@@ -1,0 +1,32 @@
+2020-09-07 13:58:04 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\Propietario\AppData\Roaming\npm\node_modules\qckwinsvc\node_modules\node-windows\lib\wrapper.js --file C:\Users\Propietario\Desktop\iece-tpr\src\index.js --log "IECE-TPR wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-07 13:58:04 - Started 12032
+2020-09-07 14:22:51 - Stopping iecetpr.exe
+2020-09-07 14:22:51 - ProcessKill 12032
+2020-09-07 14:22:51 - Found child process: 11232 Name: conhost.exe
+2020-09-07 14:22:51 - Found child process: 18888 Name: node.exe
+2020-09-07 14:22:51 - Stopping process 11232
+2020-09-07 14:22:51 - Send SIGINT 11232
+2020-09-07 14:22:51 - SIGINT to 11232 failed - Killing as fallback
+2020-09-07 14:22:51 - Stopping process 18888
+2020-09-07 14:22:51 - Send SIGINT 18888
+2020-09-07 14:22:51 - SIGINT to 18888 failed - Killing as fallback
+2020-09-07 14:22:51 - Stopping process 12032
+2020-09-07 14:22:51 - Send SIGINT 12032
+2020-09-07 14:22:51 - SIGINT to 12032 failed - Killing as fallback
+2020-09-07 14:22:51 - Finished iecetpr.exe
+2020-10-15 13:09:21 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\Propietario\AppData\Roaming\npm\node_modules\qckwinsvc\node_modules\node-windows\lib\wrapper.js --file C:\Users\Propietario\Desktop\iece-tpr\src\index.js --log "IECE-TPR wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-15 13:09:21 - Started 13560
+2020-10-16 11:47:45 - Stopping iecetpr.exe
+2020-10-16 11:47:46 - ProcessKill 13560
+2020-10-16 11:47:46 - Shutdown exception
+Message:Se está cerrando el sistema.
+
+Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   en System.Management.ManagementScope.InitializeGuts(Object o)
+   en System.Management.ManagementScope.Initialize()
+   en System.Management.ManagementObjectSearcher.Initialize()
+   en System.Management.ManagementObjectSearcher.Get()
+   en winsw.WrapperService.GetChildPids(Int32 pid)
+   en winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   en winsw.WrapperService.StopIt()
+   en winsw.WrapperService.OnShutdown()

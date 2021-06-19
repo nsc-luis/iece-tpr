@@ -1,0 +1,475 @@
+<div class="container mt-4">
+
+    <form action="/distrito/add" method="post">
+        <div class="row">
+
+            {{!FORMULARIO DE DATOS GENERALES DEL DISTRITO}}
+
+            <div class="col-md-2 form-group">
+                <label for="nombre">Nombre*</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <input type="text" required="required" name="nombre" class="form-control" id="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="tipoDto">Tipo de distrito*</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="tipoDto" id="" class="form-control">
+                    <option value="0">Por definir</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idSectorBase">Sector base*</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idSectorBase" id="" class="form-control">
+                    <option value="0">Realizar nueva alta</option>
+                </select>
+            </div>
+             <div class="col-md-1 form-group">
+                <a href="#" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#modalIdSectorBase">Agregar</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idObispo">Obispo*</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idObispo" id="" class="form-control">
+                    <option value="0">Realizar nueva alta</option>
+                </select>
+            </div>
+            <div class="col-md-1 form-group">
+                <a href="#" data-toggle="modal" data-target="#modalIdObispo" class="btn btn-dark btn-sm">Agregar</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idObispoSuplete">Obispo suplente</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idObispoSuplete" id="" class="form-control">
+                    <option value="0">Por definir en sector</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idSecretario">Secretario</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idSecretario" id="" class="form-control">
+                    <option value="0">Por definir en sector</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idSubSecretario">Sub secretario</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idSubSecretario" id="" class="form-control">
+                    <option value="0">Por definir en sector</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idTesorero">Tesorero</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idTesorero" id="" class="form-control">
+                    <option value="0">Por definir en sector</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="idSubTesorero">Sub tesorero en sector</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <select name="idSubTesorero" id="" class="form-control">
+                    <option value="0">Por definir en sector</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="fechaOrganizacion">Fecha de organizacion*</label>
+            </div>
+            <div class="col-md-2 form-group">
+                <input type="text" required="required" name="fechaOrganizacion" class="form-control" id="fechaOrganizacion">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label for="domicilioEspecialCorrespondencia">Domicilio esp. correspondencia</label>
+            </div>
+            <div class="col-md-5 form-group">
+                <textarea name="domicilioEspecialCorrespondencia" class="form-control" id="" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+
+        {{!FORMULARIO MODAL PARA ALTA DE INFO DEL SECTOR BASE}}
+
+        <div class="modal fade" id="modalIdSectorBase" tabindex="-1" role="dialog" aria-labelledby="modalLabelIdSectorBase" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabelIdSectorBase">Datos del sector base</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="nombreSector">Nombre*</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <input type="text" name="nombreSector" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="nombreSector" style="color: red;">Tipo sector*</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <select name="tipoSector" class="form-control">
+                                    <option value="0">Por definir</option>
+                                </select>
+                            </div>
+                        </div>
+                            
+                            {{!-- idDistrito
+                            idPastor
+                            idSecretario
+                            idTesorero --}}
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="socFemenil">Soc. femenil</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <input type="text" name="socFemenil" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="fechaOrgSocFemenil">Fechar organización soc. femenil</label>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <input type="text" name="fechaOrgSocFemenil" class="form-control" id="fechaOrgSocFemenil">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="socVaronil">Soc. varonil</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <input type="text" name="socVaronil" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="fechaOrgSocVaronil">Fechar organización soc. varonil</label>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <input type="text" name="fechaOrgSocVaronil" class="form-control" id="fechaOrgSocVaronil">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="socJuvenil">Soc. juvenil</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <input type="text" name="socJuvenil" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="fechaOrgSocJuvenil">Fechar organización soc. juvenil</label>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <input type="text" name="fechaOrgSocJuvenil" class="form-control" id="fechaOrgSocJuvenil">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="socInfantil">Soc. infantil</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <input type="text" name="socInfantil" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="fechaOrgSocInfantil">Fechar organización soc. infantil</label>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <input type="text" name="fechaOrgSocInfantil" class="form-control" id="fechaOrgSocInfantil">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="coroOficiaL">Coro oficial</label>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <input type="text" name="coroOficiaL" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-md-12">
+                                <a href="#" class="btn btn-dark btn-sm d-block" data-dismiss="modal">Cerrar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{! FORMULARIO MODAL PARA ALTA DE INFO DEL OBISPO DEL DISTRITO }}
+
+        <div class="modal fade" id="modalIdObispo" tabindex="-1" role="dialog" aria-labelledby="modalLabelIdObispo" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabelIdObispo">Datos del obispo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-4">
+
+                        {{! DATOS GENERALES DE MEMBRESIA A LA IECE }}
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#datosDeMembresia" aria-expanded="true" aria-controls="collapseOne">
+                                        Datos de membresia
+                                    </button>
+                                </h2>
+                                </div>
+
+                                <div id="datosDeMembresia" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <label for="nombreSector">Nombre</label>
+                                            </div>
+                                            <div>
+                                                <input type="text" name="nombreSector" class="form-control" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+
+                                   
+
+                                </div>
+                            </div>
+
+                            {{! DATOS ESPECIFICOS PARA MINISTROS }}
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#datosDeMinistro" aria-expanded="false" aria-controls="collapseTwo">
+                                        Datos del ministro
+                                    </button>
+                                </h2>
+                                </div>
+                                <div id="datosDeMinistro" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="gradoMinisterial">Grado ministerial*</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <select name="gradoMinisterial" class="form-control">
+                                                <option value="auxiliar">Auxiliar</option>
+                                                <option value="diacono">Diacono</option>
+                                                <option value="anciano">Anciano</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="fechaOrdenamientoDiacono">Fecha de fecha de ordenamiento a diacono</label>
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                            <input type="text" name="fechaOrdenamientoDiacono" class="form-control" id="fechaOrdenamientoDiacono">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="fechaOrdenamientoAnciano">Fecha de fecha de ordenamiento a anciano</label>
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                            <input type="text" name="fechaOrdenamientoAnciano" class="form-control" id="fechaOrdenamientoAnciano">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="dedicado">Dedicado*</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <select name="dedicado" class="form-control">
+                                                <option value="1">Si</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="ancianoAuxiliar">Anciano axuliar</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <select name="ancianoAuxiliar" class="form-control">
+                                                <option value="1">Si</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="activo">Activo</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <select name="activo" class="form-control">
+                                                <option value="1">Si</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="registroGobernacion" style="color: red;">Registro de gobernacion</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="registroGobernacion" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="jubilado">Jubilado</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <select name="jubilado" class="form-control">
+                                                <option value="1">Si</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="noCredencial">Numero de credencial</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="noCredencial" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="tipoCredencial" style="color: red;">Tipo de credencial</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="tipoCredencial" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="tituloCredencial" style="color: red;">Titulo de credencial</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="tituloCredencial" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="servicioMedico" style="color: red;">Servicio medico</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="servicioMedico" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="emailIECE">Email IECE</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="emailIECE" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="passwordIECE">Password email IECE</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <input type="text" name="passwordIECE" class="form-control" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="documentoPersonal">Documento personal</label>
+                                        </div>
+                                        <div class="form-group col-md-10">
+                                            <textarea  cols="30" rows="5" name="documentoPersonal" class="form-control" id=""></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                    {{!-- idMinistro INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
+                                    idMiembro INT NOT NULL DEFAULT 0 --}}
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-1">
+                            <div class="col-md-12">
+                                <a href="#" class="btn btn-dark btn-sm d-block" data-dismiss="modal">Cerrar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-7 d-block">
+                <button class="btn btn-success btn-sm w-100 text-center">Guardar</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
